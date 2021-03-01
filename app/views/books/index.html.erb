@@ -1,3 +1,10 @@
+<% @books.each do |book| %>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+    </tr>
+  <% end %>
+
 <h2>New Book</h2>
 <%= form_with model:@book, local:true do |f| %>
 
