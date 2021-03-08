@@ -1,0 +1,15 @@
+<%= form_for(book) do |f| %>
+  <div>
+    <%= f.label :Title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+  	<%= f.label :Opinion %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
