@@ -1,1 +1,8 @@
-<h1>edit</h1>
+<h1>Editing Book</h1>
+    <%= render 'books/book', book: @book %>
+
+<div class ="link">
+    <%= link_to "Show", book_path(@book) %>
+    <%= "|" %>
+    <%= link_to "Back", books_path 
+</div>
