@@ -4,7 +4,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     @book_user_id = current_user.id
     if @book.save
-      redirect_to book_path
+      redirect_to book_path(@book)
     else
       @user = current_user
       @books = Book.all
@@ -25,7 +25,7 @@ class BooksController < ApplicationController
   end
   
   def edit
-    @book = book.find(params[:id])
+    @book = ook.find(params[:id])
     if @book.user == current_user
       render 'edit'
     else
