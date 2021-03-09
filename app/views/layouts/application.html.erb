@@ -25,10 +25,20 @@
             <li>
               <%= link_to "Home", user_path(current_user) %>
             </li>
+            <!--後でリンクを足す-->
+            <li>
+              Users
+            </li>
+            <li>
+              <%= link_to "Books", books_path %>
+            </li>
             <li>
               <%= link_to "logout", destroy_user_session_path, method: :delete %>
             </li>
           <% else %>
+            <li>
+              <%= link_to "Home", root_path %>
+            </li>
             <li>
               <%= link_to "about", homes_about_path %>
             </li>
