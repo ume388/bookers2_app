@@ -11,13 +11,11 @@
 
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
-      <div>
+      <div class="container">
         <nav class="nav navbar-nav navbar-left">
-          <ul>
-            <li>
-              <%= link_to "Bookers", root_path %>
-            </li>
-          </ul>
+          <div class="bookers">
+            <%= link_to "Bookers", root_path %>
+          </div>
         </nav>
       
         <nav>
@@ -63,6 +61,14 @@
         <%= yield %>
   </body>
   
-  <footer>CopyRight Infratop.inc</footer>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto">
+          <p>CopyRight Infratop.inc</p>
+        </div>
+      </div>
+    </div>
+  </footer>
   
 </html>
