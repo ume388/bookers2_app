@@ -1,4 +1,13 @@
 <h2>User info</h2>
+<% if @user.errors.any? %>
+	<h3><%= @user.errors.count %>error occurrence</h3><!--エラーメッセ-->
+		<ul>
+			<% @user.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+			<% end %>
+		</ul>
+<% end %>
+
 <%= form_with model:@user, local:true do |f| %>
   <div class="user-name">Name</div>
     <%= f.text_field :name %>
