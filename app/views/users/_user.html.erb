@@ -8,15 +8,15 @@
   <tbody>
     <tr>
       <th>Name</th>
-      <th><%= User.name %></th>
+      <th><%= user.name %></th>
     </tr>
     <tr>
       <th>Introduction</th>
-      <th><%= current_user.introduction %></th>
+      <th><%= user.introduction %></th>
     </tr>
     <tr>
       <th>
-        <%= link_to edit_user_path(current_user), class: "fas fa-user-cog" do %>
+        <%= link_to edit_user_path(user), class: "fas fa-user-cog" do %>
       <% end %>
       </th>
     </tr>

@@ -1,5 +1,5 @@
 <div>
-  <%= render 'users/user', user: @user %>
+  <%= render 'users/user', user: current_user %>
   <h2>New book</h2>
   <%= render 'books/book', book: @book %>
 </div>
@@ -23,7 +23,7 @@
             <%= user.name %>
           </td>
           <td>
-            <%= link_to "Show", "/users/#{user.id}" %>
+            <%= link_to "Show", user, class: "user_#{user.id}" %>
           </td>
         </tr>
       <% end %>
