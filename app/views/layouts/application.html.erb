@@ -22,6 +22,7 @@
           
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
+              <!--ユーザーがログインしている場合-->
               <% if user_signed_in? %>
                 <li>
                   <%= link_to "Home", user_path(current_user), class: "fas fa-home" %>
@@ -35,6 +36,8 @@
                 <li>
                   <%= link_to "logout", destroy_user_session_path, method: :delete, class: "fas fa-sign-out-alt" %>
                 </li>
+              
+              <!--ログインしていない場合-->
               <% else %>
                 <li>
                   <%= link_to "Home", root_path, class: "fas fa-home" %>
@@ -55,6 +58,7 @@
       </nav>
     </header>
     
+    <!--フラッシュメッセージの表示-->
     <div class="container">
       <p id="notice">
         <%= notice %>
