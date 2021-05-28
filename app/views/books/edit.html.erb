@@ -1,7 +1,9 @@
+<!--本の編集画面-->
 <div class="container">
     <div class="row">
         <div class="col-md-8">
             <h1>Editing Book</h1>
+                <!--エラーメッセージの表示-->
                 <% if @book.errors.any? %>
                     <div id="error_explanation">
                         <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
@@ -13,6 +15,7 @@
                     </div>
                 <% end %>
                 
+                <!--部分テンプレートの呼び出し-->
                 <%= render 'books/book', book: @book %>
 
             <div class ="link">
