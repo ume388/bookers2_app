@@ -1,5 +1,6 @@
 <div class="container">
   <h2>User info</h2>
+  <!--エラーメッセージの表示-->
   <% if @user.errors.any? %>
 	  <h3><%= @user.errors.count %>error occurrence</h3>
 		  <ul>
@@ -9,6 +10,7 @@
 		  </ul>
   <% end %>
 
+  <!--入力フォーム-->
   <%= form_with model:@user, local:true do |f| %>
     <div class="user-name">Name</div>
       <%= f.text_field :name %>
