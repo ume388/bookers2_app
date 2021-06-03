@@ -1,8 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
+      <!--部分テンプレートの呼び出し-->
       <%= render 'users/user', user: current_user %>
       <h2>New book</h2>
+      <!--部分テンプレートの呼び出し-->
       <%= render 'books/book', book: @book %>
     </div>
 
@@ -15,6 +17,7 @@
           <th colspan="3"></th>
         </thead>
     
+        <!--すべてのユーザー情報の呼び出し-->
         <tbody>
           <% @users.each do |user| %>
             <tr>
